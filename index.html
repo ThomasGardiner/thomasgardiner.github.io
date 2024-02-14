@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text and Image Layout</title>
+    <title>S&P600 Sector Strength Comparison</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         .container {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
         }
 
         .text {
             width: 45%;
+            padding-right: 20px;
+        }
+
+        .text h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            margin: 0 0 10px;
         }
 
         .image {
@@ -24,26 +45,22 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="text">
-            <h2>Sector Strength Comparison in the S&P600</h2>
-            <p>This web application downloads the Wikipedia list of S&P600 stocks</p>
-            <p>and uses Yahoo Finace data to evaluate the balance sheet of each one</p>
-            <p>The Graph on the right shows Gardiner's Ratio (Invested Capital to </p>
-            <p>Total Debt Ratio) in each of the 6 GICS Sectors. It is evident that </p>
-            <p>the Tech Industry has less debt than Industrials and Finance. This </p>
-            <p>is in line with the difference in returns we have seen between the </p>
-            <p>tech-heavy Nasdaq 100 Index and the Dow-Jones Industrial Average</p>
-            <p><colgroup></colgroup></p>
-
+            <h2>S&P600 Sector Strength Comparison</h2>
+            <p>This web application analyzes the financial health of S&P600 companies.</p>
+            <p>We retrieve data from Wikipedia to compile a list of S&P600 stocks.</p>
+            <p>Then, using Yahoo Finance data, we evaluate the balance sheet of each company.</p>
+            <p>The graph on the right illustrates Gardiner's Ratio (Invested Capital to Total Debt Ratio) across the 6 GICS Sectors.</p>
+            <p>Notably, the Tech Industry displays lower debt levels compared to Industrials and Finance.</p>
+            <p>This observation aligns with the differing performance of indices such as the tech-heavy Nasdaq 100 Index and the Dow Jones Industrial Average.</p>
         </div>
         <div class="image">
-            <img src="plot.png" alt="Plot Image">
+            <img src="plot.png" alt="Gardiner's Ratio Graph">
         </div>
     </div>
 </body>

@@ -101,11 +101,32 @@
     <div class="container">
         <div class="text">
             <h2>S&P600 Sector Strength Comparison</h2>
-            <p>This web application, powered by Python, conducts in-depth analyses of S&P600 companies' financial health. Utilizing HTML scraping, it extracts pertinent data from Wikipedia to compile a comprehensive list of S&P600 stocks. Using the Yahoo Finance library, it then retrieves and integrates the balance sheets of these companies into a structured pandas DataFrame. Subsequently, employing pandas' robust data manipulation capabilities, the application organizes the data according to the Global Industry Classification Standard (GICS) sectors. Finally, utilizing Matplotlib, it presents insightful visualizations, offering an overview of certain financial trends within the S&P600 index.</p>
-            <p>The graph below illustrates Gardiner's Ratio (Invested Capital to Total Debt Ratio) across the 6 GICS Sectors. Notably, the Tech Industry displays lower debt levels compared to Industrials and Finance. This observation aligns with the differing performance of indices such as the tech-heavy Nasdaq 100 Index and the Dow Jones Industrial Average.</p>
+            <p>This web application, powered by Python, conducts in-depth analyses of S&P600 companies' financial health. Utilizing HTML scraping, it extracts pertinent data from Wikipedia to compile a comprehensive list of S&P600 stocks. Using the Yahoo Finance library, it then retrieves and integrates the balance sheets and income sheets of these companies into a structured pandas DataFrame. Subsequently, employing pandas' robust data manipulation capabilities, the application organizes the data as needed. Finally, utilizing Matplotlib, it presents insightful visualizations, offering an overview of certain financial trends within the S&P600 index.</p>
         </div>
         <div class="image">
-            <img src="plot.png" alt="Gardiner's Ratio Graph">
+            <img src="plot.png" alt="Debt Ratio Graph">
+        </div>
+        <div class="container">
+            <div class="text">
+                <p>The graph zbove illustrates Debt Ratio (Total Debt to to Total Assets Ratio) across the 6 GICS Sectors. Notably, the Tech Industry displays lower debt levels compared to Industrials and Finance. This observation aligns with the differing performance of indices such as the tech-heavy Nasdaq 100 Index and the Dow Jones Industrial Average.</p>
+            </div>
+        </div>
+            <div class="image">
+                <img src="plot1.png" alt="Liquidity Ratio Graph">
+            </div>
+        <div class="container">
+            <div class="text">
+                <p>This graph shows the average liquidity ratio for each sector in the S&P 600. The liquidity ratio is a measure of a company's ability to meet its short-term obligations, such as its debts and accounts payable. It is calculated by dividing current assets by current liabilities.</p>                
+                <p>There are a number of factors that can affect a company's liquidity ratio, including its industry, its business model, and its financial health. For example, companies in industries that are cyclical, such as energy, tend to have lower liquidity ratios than companies in industries that are more stable, such as consumer staples. Companies that have a lot of debt may also have lower liquidity ratios than companies that are less leveraged.</p>
+            </div>
+        </div>
+        <div class="image">
+            <img src="plot2.png" alt="Graph3">
+        </div>
+        <div class="container">
+            <div class="text">
+                <p>This snapshot exposes a fascinating interplay between industry and financial fitness. While Tech reigns supreme in profitability, its crown is tarnished by a middling liquidity ratio. In contrast, stodgy Utilities, despite lagging profits, boast a war chest of quick assets, suggesting a hidden resilience. This begs the question: is true financial health a harmonious blend of profit and liquidity, or can one compensate for the other? Perhaps the answer lies in the strategic choices of each sector's captains, navigating the ever-shifting tides of the market.</p>
+            </div>
         </div>
     </div>
 </body>

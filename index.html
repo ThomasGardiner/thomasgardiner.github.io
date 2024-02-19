@@ -101,53 +101,57 @@
     <div class="container">
         <div class="text">
             <h2>S&P600 Sector Strength Comparison</h2>
-            <p>This web application, powered by Python, conducts in-depth analyses of S&P600 companies' financial health. Utilizing HTML scraping, it extracts pertinent data from Wikipedia to compile a comprehensive list of S&P600 stocks. Using the Yahoo Finance library, it then retrieves and integrates the balance sheets and income sheets of these companies into a structured pandas DataFrame. Subsequently, employing pandas' robust data manipulation capabilities, the application organizes the data as needed. Finally, utilizing Matplotlib, it presents insightful visualizations, offering an overview of certain financial trends within the S&P600 index.</p>
-        </div>
-        <div class="image">
-            <img src="plot.png" alt="Debt Ratio Graph">
-        </div>
-        <div class="container">
-            <div class="text">
-                <p>The graph above illustrates Debt Ratio (Total Debt to to Total Assets Ratio) across the 6 GICS Sectors. Notably, the Tech Industry displays lower debt levels compared to Industrials and Finance. This observation aligns with the differing performance of indices such as the tech-heavy Nasdaq 100 Index and the Dow Jones Industrial Average.</p>
-            </div>
-        </div>
-            <div class="image">
-                <img src="plot1.png" alt="Liquidity Ratio Graph">
-            </div>
-        <div class="container">
-            <div class="text">
-                <p>This graph shows the average liquidity ratio for each sector in the S&P 600. The liquidity ratio is a measure of a company's ability to meet its short-term obligations, such as its debts and accounts payable. It is calculated by dividing current assets by current liabilities. There are a number of factors that can affect a company's liquidity ratio, including its industry, its business model, and its financial health. For example, companies in industries that are cyclical, such as energy, tend to have lower liquidity ratios than companies in industries that are more stable, such as consumer staples. Companies that have a lot of debt may also have lower liquidity ratios than companies that are less leveraged.</p>
-            </div>
-        </div>
-        <div class="image">
-            <img src="plot2.png" alt="Graph3">
-        </div>
-        <div class="container">
-            <div class="text">
-                <p>This snapshot exposes a fascinating interplay between industry and financial fitness. While Tech reigns supreme in profitability, its crown is tarnished by a middling liquidity ratio. In contrast, stodgy Utilities, despite lagging profits, boast a war chest of quick assets, suggesting a hidden resilience. This begs the question: is true financial health a harmonious blend of profit and liquidity, or can one compensate for the other? Perhaps the answer lies in the strategic choices of each sector's captains, navigating the ever-shifting tides of the market.</p>
-            </div>
-        </div>
-        <div class="image">
-            <img src="plot3.png" alt="Graph4">
-        </div>
-        <div class="container">
-            <div class="text">
-                <p>This chart spotlights the asset turnover champions of the S&P 600, revealing how efficiently companies extract revenue from their assets. Consumer Staples leads the pack, suggesting they excel at generating sales without bogging themselves down with excessive assets. In stark contrast, Utilities bring up the rear, likely due to the capital-intensive nature of their infrastructure. But is this sluggishness a sign of weakness, or simply a different strategic approach? </p>
-            </div>
-        </div>
-        <div class="image">
-            <img src="plot4.png" alt="Graph5">
-        </div>
-        <div class="container">
-            <div class="text">
-                <p>This graph shows the average quick ratio for each sector in the S&P 600. The quick ratio is a measure of a company's ability to meet its short-term obligations, such as its debts and accounts payable, using its most liquid assets. It is calculated by dividing a company's current assets minus its inventory by its current liabilities.
+            <p>This dynamic web application, crafted with Python's versatility, transcends mere data exploration to deliver insightful analyses of the S&P 600's financial landscape. Leveraging advanced web scraping techniques, it delves into the rich repository of Wikipedia to curate a comprehensive inventory of S&P 600 constituents. Subsequently, it seamlessly integrates balance sheets and income statements via the Yahoo Finance library, meticulously organizing them into a structured pandas DataFrame for efficient manipulation.
 
-                    As you can see from the graph, the average quick ratio varies from sector to sector. The consumer staples sector has the highest average quick ratio, at 1.6, while the energy sector has the lowest, at 0.6. This means that, on average, companies in the consumer staples sector are better able to meet their short-term obligations using their most liquid assets than companies in the energy sector.
-                    
-                    There are a number of factors that can affect a company's quick ratio, including its industry, its business model, and its financial health. For example, companies in industries that tend to hold a lot of inventory, such as retail, may have lower quick ratios than companies in industries that hold less inventory, such as technology. Companies that have a lot of debt may also have lower quick ratios than companies that are less leveraged.
-                    
-                    The quick ratio is a useful tool for investors to assess a company's short-term liquidity. However, it is important to note that the quick ratio is just one measure of a company's financial health. Other factors, such as the company's profitability and its debt-to-equity ratio, should also be considered when evaluating a company's financial strength.</p>
-            </div>
+                The application's true prowess lies in its analytical capabilities. By harnessing the power of pandas and Matplotlib, it unveils hidden patterns and trends within the S&P 600, a unique index encompassing small-cap companies often overlooked by traditional investment analysis. This granular, sector-specific approach empowers users to discern valuable financial insights that might otherwise remain opaque.
+                
+                Furthermore, the dynamic visualizations generated by Matplotlib provide an intuitive interface for exploring critical financial metrics, empowering users to make informed investment decisions.</p>
+        </div>
+        <div class="image">
+            <img src="plot_debt_ratio.png" alt="Debt Ratio Graph">
+        </div>
+        <div class="text">
+            <p>This visualization dissects the leverage profiles of the S&P 500 across GICS sectors, revealing a stark disparity: technology companies exhibit a distinctly lower Debt Ratio (Total Debt to Total Assets Ratio) compared to their counterparts in Industrials and Finance.
+
+                This observation resonates with established financial theory, positing that growth-oriented firms, often prevalent in the technology sector, tend to favor equity financing over debt due to its flexibility and lack of fixed interest repayments. This strategy prioritizes long-term growth potential over immediate profitability, potentially explaining the lower debt levels observed.
+                
+                Interestingly, this aligns with the historical performance divergence between major indices. The tech-heavy Nasdaq 100, known for its growth orientation, has significantly outpaced the more industrially-focused Dow Jones Industrial Average over the past decade, further supporting the link between lower debt and growth potential.
+                
+                By highlighting this nuanced relationship between sector, leverage, and performance, this visualization offers valuable insights for investors seeking to understand the underlying dynamics shaping market behavior.</p>
+        </div>
+        <div class="image">
+            <img src="plot_liquidity_ratio.png" alt="Liquidity Ratio Graph">
+        </div>
+        <div class="text">
+            <p>This graph shows the average liquidity ratio for each sector in the S&P 600. The liquidity ratio is a measure of a company's ability to meet its short-term obligations, such as its debts and accounts payable. It is calculated by dividing current assets by current liabilities. There are a number of factors that can affect a company's liquidity ratio, including its industry, its business model, and its financial health. For example, companies in industries that are cyclical, such as energy, tend to have lower liquidity ratios than companies in industries that are more stable, such as consumer staples. Companies that have a lot of debt may also have lower liquidity ratios than companies that are less leveraged.</p>
+        </div>
+        <div class="image">
+            <img src="plot_profit_margin.png" alt="Graph3">
+        </div>
+        <div class="text">
+            <p>Delving into the financial intricacies of the S&P 600, this visualization unveils a counterintuitive truth: the Real Estate sector boasts a higher average profit margin compared to the often-lauded Tech sector. This phenomenon can be partially attributed to the divergent accounting methods employed by each industry, with Real Estate leveraging depreciation strategies that can effectively lower taxable income.
+
+                Furthermore, it's worth noting that the S&P 600, unlike its larger counterpart the S&P 500, comprises a significant portion of young, high-growth companies within the Tech sector. These firms often prioritize market share and user acquisition over immediate profitability, contributing to the observed margin differential.
+                
+                This nuanced perspective underscores the importance of sector-specific analysis when evaluating profit margins. While headline figures might suggest underperformance in Tech, a deeper understanding of industry dynamics reveals a more complex narrative.</p>
+        </div>
+        <div class="image">
+            <img src="plot_asset_turnover_ratio.png" alt="Graph4">
+        </div>
+        <div class="text">
+            <p>This chart spotlights the asset turnover champions of the S&P 600, revealing how efficiently companies extract revenue from their assets. Consumer Staples leads the pack, suggesting they excel at generating sales without bogging themselves down with excessive assets. In stark contrast, Utilities bring up the rear, likely due to the capital-intensive nature of their infrastructure. But is this sluggishness a sign of weakness, or simply a different strategic approach?</p>
+        </div>
+        <div class="image">
+            <img src="plot_quick_ratio.png" alt="Graph5">
+        </div>
+        <div class="text">
+            <p>This graph shows the average quick ratio for each sector in the S&P 600. The quick ratio is a measure of a company's ability to meet its short-term obligations, such as its debts and accounts payable, using its most liquid assets. It is calculated by dividing a company's current assets minus its inventory by its current liabilities.
+
+            As you can see from the graph, the average quick ratio varies from sector to sector. The consumer staples sector has the highest average quick ratio, at 1.6, while the energy sector has the lowest, at 0.6. This means that, on average, companies in the consumer staples sector are better able to meet their short-term obligations using their most liquid assets than companies in the energy sector.
+
+            There are a number of factors that can affect a company's quick ratio, including its industry, its business model, and its financial health. For example, companies in industries that tend to hold a lot of inventory, such as retail, may have lower quick ratios than companies in industries that hold less inventory, such as technology. Companies that have a lot of debt may also have lower quick ratios than companies that are less leveraged.
+
+            The quick ratio is a useful tool for investors to assess a company's short-term liquidity. However, it is important to note that the quick ratio is just one measure of a company's financial health. Other factors, such as the company's profitability and its debt-to-equity ratio, should also be considered when evaluating a company's financial strength.</p>
         </div>
     </div>
 </body>

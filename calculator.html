@@ -42,8 +42,8 @@
 
 <div class="container">
     <h2>Fuel Range Calculator:</h2>
-    <h2>Driving "Pedal to the Metal"</h2>
-    <p>This calculator uses the stoichiometric ratio for air to fuel in combination with the intake pressure findings <a href="https://www.freeasestudyguides.com/engine-vacuum-test.html">cited</a>, and given engine displacement to determine how much fuel is consumed per engine revolution. It then assumes a 1:1 gear ratio from the transmission, typical on the highest gear before overdrive, as well as a common 3.73 differential ratio, in combination with the given tire size to convert the result into distance(miles).</p>
+    <h2>Stoichiometric & Mechanical</h2>
+    <p>This calculator uses the stoichiometric ratio for air to fuel, the intake pressure findings <a href="https://lambdageeks.com/map-sensor-testing/">cited</a>, and given engine displacement to determine how much fuel is consumed per engine revolution. It then assumes the driver has the pedal depressed 30% of the way, a 1:1 gear ratio from the transmission, typical on the highest gear before overdrive, as well as a common 3.73 differential ratio, in combination with the given tire size to convert the result into distance(miles).</p>
     <label for="engineSize">Engine Size (Liters):</label>
     <input type="number" id="engineSize" step="0.01" placeholder="Enter engine size">
 
@@ -78,8 +78,11 @@
         // Convert engine displacement from liters to grams using air density (assuming standard conditions)
         var engineSizeGrams = engineSize * 1.225; // Air density at standard conditions: 1.225 g/L
 
+        // Account for pressure drop 
+        var engineSizeGrams_adj = engineSizeGrams * ((14.7-((1-0.3)*(14.7-5.5)))/14.7) // Empirically found pressure (Psi) inside intake manifold at 30% throttle
+
         // Calculate grams of fuel consumed per rotation
-        var fuelConsumptionRate = 0.5 * engineSizeGrams / (stoichiometricRatio + 1);
+        var fuelConsumptionRate = 0.5 * engineSizeGrams_adj / (stoichiometricRatio + 1);
 
         // Convert fuel consumption rate from grams to liters
         // Density of gasoline is approximately 0.7379 kg/liter or 737.9 g/liter

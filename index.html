@@ -21,12 +21,12 @@
             background-color: #f2f2f2;
             padding: 20px;
             position: fixed;
-            top: 0;
+            top: 60px; /* Adjusted to position below the header */
             left: 0;
             bottom: 0;
         }
         #content {
-            margin-left: 220px; /* Adjusted to accommodate the width of the left panel */
+            margin-left: 250px; /* Adjusted to accommodate the width of the left panel and photo */
             padding: 20px;
         }
         #left-panel a {
@@ -37,6 +37,12 @@
         }
         #left-panel a:hover {
             background-color: #ddd;
+        }
+        #photo {
+            max-width: 150px;
+            display: block;
+            margin: 20px auto; /* Center the photo and add some margin */
+            border-radius: 50%; /* Make the photo round */
         }
     </style>
 </head>
@@ -49,13 +55,14 @@
 <div id="left-panel">
     <a href="/SectorAnalysis.html">Projects</a>
     <a href="/Resume.html">Resume</a>
-    <a href="#about">About Me</a>
+    <a href="/about_me.html">About Me</a>
 </div>
 
 <div id="content">
     <!-- Your content goes here -->
-    <h2>Welcome to my personal website!</h2>
-    <p>This is the landing page for my software developer portfolio.</p>
+    <img id="photo" src="thomasgardiner.png" alt="Thomas Gardiner">
+    <h2 style="text-align: center;">Welcome to my personal website!</h2>
+    <p style="text-align: center;">This is the landing page for my software developer portfolio.</p>
 </div>
 
 </body>

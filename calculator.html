@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Range Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Fuel Range Calculator:</h2>
+    <h2>Driving "Pedal to the Metal"</h2>
+    <p>This assumes are flooring it the whole time, standard temperature & pressure in the intake manifold, as well as a 1:1 ratio in the transmission (no overdrive), and a common 3.73 differential ratio</p>
+    <label for="engineSize">Engine Size (Liters):</label>
+    <input type="number" id="engineSize" step="0.01" placeholder="Enter engine size">
+
+    <label for="tireDiameter">Tire Diameter (Inches):</label>
+    <input type="number" id="tireDiameter" step="0.1" placeholder="Enter tire diameter">
+
+    <label for="gallons">Gallons of Gasoline:</label>
+    <input type="number" id="gallons" step="0.1" placeholder="Enter gallons of gasoline">
+
+    <button onclick="calculateFuelRange()">Calculate</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    function calculateFuelRange() {
+        var engineSize = parseFloat(document.getElementById('engineSize').value);
+        var tireDiameter = parseFloat(document.getElementById('tireDiameter').value);
+        var gallons = parseFloat(document.getElementById('gallons').value);
+
+        if (isNaN(engineSize) || isNaN(tireDiameter) || isNaN(gallons)) {
+            alert('Please enter valid numbers for all inputs.');
+            return;
+        }
+
+        // Convert gallons to liters (1 gallon = 3.78541 liters)
+        var liters = gallons * 3.78541;
+
+        // Stoichiometric air-fuel ratio (14.7 parts air to 1 part fuel)
+        var stoichiometricRatio = 14.7;
+
+        // Convert engine displacement from liters to grams using air density (assuming standard conditions)
+        var engineSizeGrams = engineSize * 1.225; // Air density at standard conditions: 1.225 g/L
+
+        // Calculate grams of fuel consumed per rotation
+        var fuelConsumptionRate = 0.5 * engineSizeGrams / (stoichiometricRatio + 1);
+
+        // Convert fuel consumption rate from grams to liters
+        // Density of gasoline is approximately 0.7379 kg/liter or 737.9 g/liter
+        var fuelConsumptionRateLiters = fuelConsumptionRate / 737.9;
+
+        // Calculate liters of air needed per rotation based on stoichiometric ratio
+        var airConsumptionRate = stoichiometricRatio * fuelConsumptionRateLiters;
+
+        // Assumption: Gear ratio (differential ratio)
+        var gearRatio = 3.73;
+
+        // Calculate rotations per liter based on fuel consumption rate and gear ratio
+        var rotationsPerLiter = (1 / fuelConsumptionRateLiters) / gearRatio;
+
+        var tireCircumference = Math.PI * tireDiameter;
+        var remainingRotations = rotationsPerLiter * liters;
+        var remainingDistance = remainingRotations * tireCircumference / 63360; // Convert inches to miles
+
+        document.getElementById('result').innerHTML = 'Remaining range: ' + remainingDistance.toFixed(2) + ' miles';
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>

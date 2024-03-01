@@ -38,7 +38,7 @@ for index, row in df.iterrows():
         total_assets = ticker_obj.balance_sheet.T['Total Assets'].iloc[0]
 </code>
             </pre>
-            <p>Certain companies have incomeplete balance sheet data, so they are dropped from the DataFrame</p>
+            <p>Certain companies have incomplete balance sheet data, so they are dropped from the DataFrame</p>
             <pre>
 <code class="language-python">
         if any(pd.isnull(value) for value in [total_assets, total_debt, total_revenue, net_income, current_liabilities, current_assets, inventory]):

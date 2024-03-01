@@ -1,99 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"></link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Gardiner Data Analytics</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .text {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .text h2 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .text p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .image {
-            width: 100%;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar {
-            width: 100%;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar li {
-            margin-bottom: 10px;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-        }
-
-        .sidebar a:hover {
-            color: #666;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -105,42 +17,41 @@
             <h3>Data Analytics</h3>
             <p>This application uses Python to offer analyses of the S&P 600's financial landscape. A pandas function reads the data from the spreadsheet on the wikipedia page into a DataFrame:</p>
             <pre>
-                <code class="language-python">
-                    url = "https://en.wikipedia.org/wiki/List_of_S%26P_600_companies" 
-                    html_content = read_html_from_website(url)
-                    list_df = pd.read_html(html_content)
-                    df = list_df[0]
-                </code>
+<code class="language-python">
+url = "https://en.wikipedia.org/wiki/List_of_S%26P_600_companies" 
+html_content = read_html_from_website(url)
+list_df = pd.read_html(html_content)
+df = list_df[0]
+</code>
             </pre>
             <p>With data from the Yahoo Finance library, it integrates balance sheets and income statements into the pandas DataFrame to allow for efficient manipulation.</p>
             <pre>
-                <code class="language-python">
-                    for index, row in df.iterrows():
-                    ticker = row['Symbol']  # Extract ticker from the current row
-                
-                    # Get financial data using yfinance
-                    ticker_obj = yf.Ticker(ticker)
-                
-                    try:
-                        # Get desired financial information
-                        total_assets = ticker_obj.balance_sheet.T['Total Assets'].iloc[0]
-                </code>
+<code class="language-python">
+for index, row in df.iterrows():
+    ticker = row['Symbol']  # Extract ticker from the current row
+
+    # Get financial data using yfinance
+    ticker_obj = yf.Ticker(ticker)
+
+    try:
+        # Get desired financial information
+        total_assets = ticker_obj.balance_sheet.T['Total Assets'].iloc[0]
+</code>
             </pre>
             <p>Certain companies have incomeplete balance sheet data, so they are dropped from the DataFrame</p>
             <pre>
-                <code class="language-python">
-                    if any(pd.isnull(value) for value in [total_assets, total_debt, total_revenue, net_income, current_liabilities, current_assets, inventory]):
-                        print(f"{ticker} removed from df: Incomplete data")
-                        df = df[df['Symbol'] != ticker]  # Remove ticker from DataFrame
-                        continue  # Skip to the next iteration if data is incomplete
-                </code>
+<code class="language-python">
+        if any(pd.isnull(value) for value in [total_assets, total_debt, total_revenue, net_income, current_liabilities, current_assets, inventory]):
+            df = df[df['Symbol'] != ticker]  # Remove ticker from DataFrame
+            continue  # Skip to the next iteration if data is incomplete
+</code>
             </pre>
             <p>The data is then grouped with a sector-specific approach using the pandas .groupby function, and subsequently, dynamic visualizations generated by Matplotlib provide an intuitive interface for exploring financial metrics, empowering users to make informed investment decisions</p>
             <pre>
-                <code class="language-python">
-                    sector_avg_debt_ratio = df.groupby('GICS Sector')["Debt Ratio"].mean().sort_values(ascending=True)
-                    sector_avg_debt_ratio.plot(kind='bar', color=colors[:len(sector_avg_debt_ratio)])
-                </code>
+<code class="language-python">
+sector_avg_debt_ratio = df.groupby('GICS Sector')["Debt Ratio"].mean().sort_values(ascending=True)
+sector_avg_debt_ratio.plot(kind='bar', color=colors[:len(sector_avg_debt_ratio)])
+</code>
             </pre>
             <h3>Visualization</h3>
         </div>
@@ -194,5 +105,7 @@
     <header>
         <h1>Thomas Gardiner Data Analytics</h1>
     </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-python.min.js"></script>
 </body>
 </html>

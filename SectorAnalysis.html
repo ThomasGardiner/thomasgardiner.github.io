@@ -50,7 +50,6 @@ for index, row in df.iterrows():
             current_assets, 
             inventory
         ]):
-            print(f"{ticker} removed from df: Incomplete data")
             df = df[df['Symbol'] != ticker]  # Remove ticker from DataFrame
             continue  # Skip to the next iteration if data is incomplete
 </code>

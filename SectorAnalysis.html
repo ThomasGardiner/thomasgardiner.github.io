@@ -41,7 +41,16 @@ for index, row in df.iterrows():
             <p>Certain companies have incomplete balance sheet data, so they are dropped from the DataFrame</p>
             <pre>
 <code class="language-python">
-        if any(pd.isnull(value) for value in [total_assets, total_debt, total_revenue, net_income, current_liabilities, current_assets, inventory]):
+        if any(pd.isnull(value) for value in [
+            total_assets,
+            total_debt, 
+            total_revenue, 
+            net_income, 
+            current_liabilities, 
+            current_assets, 
+            inventory
+        ]):
+            print(f"{ticker} removed from df: Incomplete data")
             df = df[df['Symbol'] != ticker]  # Remove ticker from DataFrame
             continue  # Skip to the next iteration if data is incomplete
 </code>

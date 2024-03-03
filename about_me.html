@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Thomas Gardiner</title>
@@ -25,14 +26,28 @@
             margin: 20px auto; /* Center the photo and add some margin */
             border-radius: 50%; /* Make the photo round */
         }
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 1000px; 
+        }
+        .home-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
 
 <div id="banner">
-    <h1>About Me - Thomas Gardiner</h1>
+    <h1>About Me - Thomas Gardiner<a href="https://thomasgardiner.github.io/" class="home-button">Home</a></h1>
 </div>
-
 <div id="content">
     <img id="photo" src="thomasgardiner.png" alt="Thomas Gardiner">
     <h3>Focus Areas</h3>
@@ -42,6 +57,5 @@
     <h3>Personal</h3>
     <p>Originally from Bryn Mawr, Pennsylvania, I rowed on the crew team and found time for the ski team in the winters. I enjoy summer visits to the Mid-Coast Maine region, reading, attending sporting events, and spending time with my loved ones.</p>
 </div>
-
 </body>
 </html>

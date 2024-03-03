@@ -1,90 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="styles.css" rel="stylesheet"></link>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G. Thomas M. Gardiner - Resume</title>
+  <title>G. Thomas M. Gardiner - Data Analyst</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0px;
+      font-family: Helvetica;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    #banner {
+    font-family: Helvetica;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
     }
     h1, h2, h3 {
-      margin: 20px;
+      margin: 20px 0;
     }
     ul {
-      margin: 20px;
-      padding-left: 30px;
+      margin: 20px 0;
+      padding-left: 20px;
     }
     li {
       line-height: 1.5;
     }
     p {
-      margin: 20px;
+      margin: 20px 0;
+    }
+    .home-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    .home-button:hover {
+    background-color: #45a049;
     }
   </style>
 </head>
+<body>
 <div id="banner">
   <a href="https://thomasgardiner.github.io/" class="home-button">Home</a>
   <h1>Thomas Gardiner Data Analytics</h1>
 </div>
-<body>
-      <h1>G. Thomas M. Gardiner</h1>
-      <p>tom777gardiner@gmail.com | 610 226 5680</p>
-      <p>South Lake Tahoe, California</p>
-      <p><a href="http://www.linkedin.com/in/g-thomas-m-gardiner/">linkedin.com/in/g-thomas-m-gardiner/</a></p>
-      <h2>EDUCATION</h2>
-      <ul>
-        <li><strong>University of California, Berkeley</strong> - Data Analytics and Visualization Certificate (2023 - 2024)</li>
-      </ul>
-      <ul>
-        <li><strong>Drexel University</strong> - Mechanical Engineering (2014 - 2016)</li>
-      </ul>
-      <ul>
-        <li><strong>Radnor High School</strong> - Academic Honors (Class of 2014)</li>
-      </ul> 
-      <h2>SKILLS</h2>
-      <ul>
-        <li>Data Analytics | Python | SQL</li>
-        <li>HTML/CSS | pandas | Matplotlib | ETL-workflow</li>
-        <li>PostgreSQL | Tableau | Flask | Excel</li>
-      </ul>
-      <h2>EXPERIENCE</h2>
+<div class="container">
+  <section>
+    <h2>Contact Information</h2>
+    <p>Email: tom777gardiner@gmail.com | Phone: 610 226 5680</p>
+    <p>Location: South Lake Tahoe, California</p>
+    <p><a href="http://www.linkedin.com/in/g-thomas-m-gardiner/">LinkedIn Profile</a></p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>University of California, Berkeley</strong> - Data Analytics and Visualization Certificate (2023 - 2024)</li>
+      <li><strong>Drexel University</strong> - Mechanical Engineering (2014 - 2016)</li>
+      <li><strong>Radnor High School</strong> - Academic Honors (Class of 2014)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Data Analytics | Python | SQL</li>
+      <li>HTML/CSS | pandas | Matplotlib | ETL-workflow</li>
+      <li>PostgreSQL | Tableau | Flask | Excel</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <article>
       <h3>Schuylkill Guard LLC</h3>
       <ul>
         <li>Managing Member (2023 - Present)</li>
-        <ul>
-          <li>Evaluated market data on changes in 400+ multi-family asset prices across 4 zip-codes; used analysis to inform competitive and profitable bid prices when sourcing investments</li>
-          <li>Developed financial model to forecast short- and long-term cash flows, expenses, and break-even year</li>
-          <li>Managed property operations including tenant marketing campaigns, maintenance, and renovations</li>
-        </ul>
+        <li>Evaluated market data on changes in 400+ multi-family asset prices across 4 zip-codes; used analysis to inform competitive and profitable bid prices when sourcing investments</li>
+        <li>Developed financial model to forecast short- and long-term cash flows, expenses, and break-even year</li>
+        <li>Managed property operations including tenant marketing campaigns, maintenance, and renovations</li>
       </ul>
+    </article>
+
+    <article>
       <h3>TD Bank N.A.</h3>
       <ul>
         <li>Retail Banker I (2022 - 2023)</li>
-        <ul>
-          <li>Verified sensitive financial data of high-net-worth clientele to ensure operational excellence and maintain compliance with federal laws</li>
-          <li>Created client relationships based on trust and product portfolio knowledgeability; steered clients toward value-creating TD services to grow their assets based on personal goals and risk tolerance</li>
-        </ul>
+        <li>Verified sensitive financial data of high-net-worth clientele to ensure operational excellence and maintain compliance with federal laws</li>
+        <li>Created client relationships based on trust and product portfolio knowledgeability; steered clients toward value-creating TD services to grow their assets based on personal goals and risk tolerance</li>
       </ul>
+    </article>
+
+    <article>
       <h3>STC Direct (AT&T Client)</h3>
       <ul>
         <li>Account Manager (February 2022 - January 2023)</li>
-        <ul>
-          <li>Exceeded monthly and quarterly sales target on recurring basis without warm leads</li>
-          <li>Attended internal sales workshops to develop persuasion and product knowledge for customer conversion</li>
-          <li>Analyzed customer purchase history and feedback to recommend solutions and upsell opportunities</li>
-        </ul>
+        <li>Exceeded monthly and quarterly sales target on recurring basis without warm leads</li>
+        <li>Attended internal sales workshops to develop persuasion and product knowledge for customer conversion</li>
+        <li>Analyzed customer purchase history and feedback to recommend solutions and upsell opportunities</li>
       </ul>
+    </article>
+
+    <article>
       <h3>Globus Medical</h3>
       <ul>
         <li>Passivation Manager (February 2017 - February 2018)</li>
-        <ul>
-          <li>Maintained proper chemistry in the passivation tanks by monitoring factors such as pH</li>
-          <li>Built a spreadsheet using Microsoft Excel and used it to monitor and record data</li>
-          <li>Responsible for paperwork inflow and outflow on each unit</li>
-        </ul>
+        <li>Maintained proper chemistry in the passivation tanks by monitoring factors such as pH</li>
+        <li>Built a spreadsheet using Microsoft Excel and used it to monitor and record data</li>
+        <li>Responsible for paperwork inflow and outflow on each unit</li>
       </ul>
+    </article>
+  </section>
+</div>
 </body>
 </html>

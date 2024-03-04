@@ -26,15 +26,20 @@ header {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0; /* Adjust padding for top and bottom */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.container:not(:last-child) {
+    margin-bottom: 20px; /* Add margin only to containers except the last one */
+}
+
 .text {
     width: 100%;
-    margin-bottom: 20px;
+    margin-top: 10px; /* Reduce the top margin */
+    margin-bottom: 10px; /* Reduce the bottom margin */
 }
 
 .text h2 {
@@ -111,5 +116,10 @@ img {
 }
 
 .home-button:hover {
-    background-color: #45a049;
+    background-color: #1c291d;
+}
+
+.iframe {
+    padding-bottom: 0px;
+    margin-top: 200px;
 }

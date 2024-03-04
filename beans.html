@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet"></link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Gardiner Data Analytics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="banner">
+        <a href="https://thomasgardiner.github.io/" class="home-button">Home</a>
+        <h1>Thomas Gardiner Data Analytics</h1>
+    </div>
+    <div class="container">
+        <iframe src="/images/MajorAxisLength-Area.html" height="500" width="1000" frameborder="0"></iframe>
+        <div class="text">
+            <h2>Bean Shape Analysis</h2>
+            <h3>Data Analytics</h3>
+            <p>Exploring the intricate world of bean shapes sheds light on significant insights. Our dataset, graciously provided by UCI, serves as a treasure trove of information awaiting exploration.</p>
+            <pre>
+<code class="language-python">
+df = pd.read_excel("./DryBeanDataset/Dry_Bean_Dataset.xlsx")
+</code>
+            </pre>
+            <p>Embarking on this analytical journey, we first acquaint ourselves with the raw data by importing it into a structured format using the Pandas library.</p>
+            <pre>
+<code class="language-python">
+    def clusterplot(df:pd.DataFrame,x:str,y:str):
+    plot=df.hvplot.scatter(
+        x=x,
+        y=y,
+        by="Class",
+        marker=["square", "hex", "cross", "inverted_triangle"],
+        title=f'{x} vs {y}'
+    )
+    hvplot.save(plot, f'images/{x}-{y}.html')
+    return plot
+</code>
+            </pre>
+            <h3>Visualization</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <iframe src="/images/MajorAxisLength-Area.html" height="400" width="2000" frameborder="0"></iframe>
+        <div class="text">
+            <p>Notable amongst the plethora of bean shapes is the Bombay variety, distinguished by its striking size and elongated form. Its prominence in our analysis signifies its uniqueness among its counterparts.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <iframe src="/images/Compactness-Eccentricity.html" height="400" width="1000" frameborder="0"></iframe>
+        <div class="text">
+            <p>This visualization unveils a fascinating mathematical relationship between the mentioned variables. Notably, the Eccentricity of the Bombay variety has been subtly adjusted to enhance its visibility, revealing intriguing insights.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <iframe src="/images/AspectRation-Eccentricity.html" height="500" width="1000" frameborder="0"></iframe>
+        <div class="text">
+            <p>Delving deeper into our analysis, we uncover another significant relationship, showcasing the asymptotic nature inherent within the dataset.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <iframe src="/images/Area-Eccentricity.html" height="500" width="1000" frameborder="0"></iframe>
+        <div class="text">
+            <p>Once again, the Bombay variety distinguishes itself, standing out prominently amidst the myriad of bean shapes.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <iframe src="/images/Area-AspectRation.html" height="500" width="1000" frameborder="0"></iframe>
+        <div class="text">
+            <p>Our final visualization divides the various beans into distinct clusters, shedding light on their diverse characteristics.</p>
+        </div>
+    </div>
+        
+    <header>
+        <h1>Thomas Gardiner Data Analytics</h1>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-python.min.js"></script>
+</body>
+</html>

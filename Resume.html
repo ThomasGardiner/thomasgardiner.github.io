@@ -53,8 +53,41 @@
     cursor: pointer;
     }
     .home-button:hover {
-    background-color: #45a049;
+    background-color: #1c291d;
     }
+    #left-panel {
+            width: 200px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            position: fixed;
+            top: 100px; /* Adjusted to position below the header */
+            left: 0;
+            bottom: 0;
+        }
+        #content {
+            margin-left: 250px; /* Adjusted to accommodate the width of the left panel and photo */
+            padding: 20px;
+        }
+        #left-panel a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        #left-panel a:hover {
+            background-color: #ddd;
+        }
+        #left-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #left-panel ul li {
+            margin-left: 10px;
+        }
+        #left-panel ul li a {
+            padding-left: 10px;
+        }
   </style>
 </head>
 <body>
@@ -62,6 +95,18 @@
   <a href="https://thomasgardiner.github.io/" class="home-button">Home</a>
   <h1>Thomas Gardiner - Data Analyst</h1>
 </div>
+
+<div id="left-panel">
+  <p>Projects</p>
+  <ul>
+    <li><a href="SectorAnalysis.html">S&P 600 Analysis</a></li>
+    <li><a href="beans.html">Bean Class Analysis</a></li>
+    <li><a href="calculator.html">Driving Range Calculator</a></li>
+  </ul>
+  <a href="Resume.html">Resume</a>
+  <a href="about_me.html">About Me</a>
+</div>
+
 <div class="container">
   <section>
     <h2>Contact Information</h2>
@@ -128,6 +173,7 @@
         <li>Responsible for paperwork inflow and outflow on each unit</li>
       </ul>
     </article>
+    
   </section>
 </div>
 </body>

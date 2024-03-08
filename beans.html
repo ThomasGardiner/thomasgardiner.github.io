@@ -16,31 +16,40 @@
         <div class="text">
             <h2>Bean Shape Analysis</h2>
             <h3>Data Analytics</h3>
-            <p>Exploring the intricate world of bean shapes sheds light on significant insights. Our dataset, graciously provided by UCI, serves as a treasure trove of information awaiting exploration.</p>
+            <p></p>"Unveiling Bean Secrets: A Function to Analyze Bean Shapes"
             <pre>
 <code class="language-python">
 df = pd.read_excel("./DryBeanDataset/Dry_Bean_Dataset.xlsx")
+def clusterplot(df:pd.DataFrame,x:str,y:str):
+plot=df.hvplot.scatter(
+    x=x,
+    y=y,
+    by="Class",
+    marker=["square", "hex", "cross", "inverted_triangle"],
+    title=f'{x} vs {y}'
+)
+hvplot.save(plot, f'images/{x}-{y}.html')
+return plot
 </code>
             </pre>
-            <p>Embarking on this analytical journey, we first acquaint ourselves with the raw data by importing it into a structured format using the Pandas library.</p>
-            <pre>
-<code class="language-python">
-    def clusterplot(df:pd.DataFrame,x:str,y:str):
-    plot=df.hvplot.scatter(
-        x=x,
-        y=y,
-        by="Class",
-        marker=["square", "hex", "cross", "inverted_triangle"],
-        title=f'{x} vs {y}'
-    )
-    hvplot.save(plot, f'images/{x}-{y}.html')
-    return plot
-</code>
-            </pre>
-            <h3>Visualization</h3>
+            <p> Functions: Functions are reusable blocks of code that perform a specific task. They improve code readability, maintainability, and modularity. In this case, the clusterplot function encapsulates the code for creating scatter plots, making it easier to reuse and modify the plotting process for different data points.
+                Here's a breakdown of the benefits of using functions:</p>
+                
+            <p>    Reusability: By creating a function, you can avoid code duplication. If you need to create the same plot multiple times with different data, you can simply call the function with the new data.
+                Maintainability: Functions make your code easier to understand and modify. If you need to change the way the plot is created, you only need to modify the code within the function.
+                Modularity: Functions break down your code into smaller, more manageable pieces. This makes it easier to test and debug your code.</p>
+
+                
+            <p> Scatter plots are a type of visualization that shows the relationship between two variables using data points. Each data point is represented by a marker, such as a circle or square, positioned on the horizontal and vertical axes according to its corresponding values.
+                
+                Hvplot is a Python library for creating interactive visualizations. The clusterplot function in the code uses hvplot to create a scatter plot of the bean data.
+            </p>
+            <p>Later, this code will be used to make an ML model. By analyzing the shapes of beans using scatter plots, data scientists can gain insights into the data and identify patterns that can be used to train a model. </p>
         </div>
     </div>
-
+    <div>
+    <h3>Visualization</h3>
+    </div>
     <div class="container">
         <iframe src="/images/MajorAxisLength-Area.html" height="400" width="2000" frameborder="0"></iframe>
         <div class="text">

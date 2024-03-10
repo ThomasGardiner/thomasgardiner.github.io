@@ -26,6 +26,7 @@ header {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    margin-left: 300px; /* Adjust margin to push content to the right of the sidebar */
     padding: 20px 0; /* Adjust padding for top and bottom */
     display: flex;
     flex-direction: column;
@@ -122,4 +123,48 @@ img {
 .iframe {
     padding-bottom: 0px;
     margin-top: 200px;
+}
+#left-panel {
+    width: 200px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: fixed;
+    top: 100px; /* Adjusted to position below the header */
+    left: 0;
+    bottom: 0;
+}
+#content {
+    margin-left: 250px; /* Adjusted to accommodate the width of the left panel and photo */
+    padding: 20px;
+}
+#left-panel a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+}
+#left-panel a:hover {
+    background-color: #ddd;
+}
+#left-panel ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#left-panel ul li {
+    margin-left: 10px;
+}
+#left-panel ul li a {
+    padding-left: 10px;
+}
+
+/* Styles for the left panel */
+#left-panel {
+    position: fixed; /* Fix the position of the left panel */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    width: 200px; /* Set the width of the left panel */
+    background-color: #f0f0f0;
+    height: 100%; /* Occupy the full height of the viewport */
+    overflow-y: auto; /* Add scrollbar if content exceeds viewport height */
 }

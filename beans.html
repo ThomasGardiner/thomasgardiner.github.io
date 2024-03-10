@@ -12,6 +12,18 @@
         <a href="https://thomasgardiner.github.io/" class="home-button">Home</a>
         <h1>Thomas Gardiner Data Analytics</h1>
     </div>
+
+    <div id="left-panel">
+        <p>Projects</p>
+        <ul>
+          <li><a href="SectorAnalysis.html">S&P 600 Analysis</a></li>
+          <li><a href="beans.html">Bean Class Analysis</a></li>
+          <li><a href="calculator.html">Driving Range Calculator</a></li>
+        </ul>
+        <a href="Resume.html">Resume</a>
+        <a href="about_me.html">About Me</a>
+      </div>
+      
     <div class="container">
         <div class="text">
             <h2>Bean Shape Analysis</h2>
@@ -34,12 +46,21 @@ return plot
             </pre>
             <p> Functions: Functions are reusable blocks of code that perform a specific task. They improve code readability, maintainability, and modularity. In this case, the clusterplot function encapsulates the code for creating scatter plots, making it easier to reuse and modify the plotting process for different data points.
                 Here's a breakdown of the benefits of using functions:</p>
-                
-            <p>    Reusability: By creating a function, you can avoid code duplication. If you need to create the same plot multiple times with different data, you can simply call the function with the new data.
-                Maintainability: Functions make your code easier to understand and modify. If you need to change the way the plot is created, you only need to modify the code within the function.
-                Modularity: Functions break down your code into smaller, more manageable pieces. This makes it easier to test and debug your code.</p>
-
-                
+            <ul>
+                <li>
+                <p> Reusability: By creating a function, you can avoid code duplication. If you need to create the same plot multiple times with different data, you can simply call the function with the new data.</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                <p> Maintainability: Functions make your code easier to understand and modify. If you need to change the way the plot is created, you only need to modify the code within the function.</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+            <p> Modularity: Functions break down your code into smaller, more manageable pieces. This makes it easier to test and debug your code.</p>
+                </li>
+            </ul>
             <p> Scatter plots are a type of visualization that shows the relationship between two variables using data points. Each data point is represented by a marker, such as a circle or square, positioned on the horizontal and vertical axes according to its corresponding values.
                 
                 Hvplot is a Python library for creating interactive visualizations. The clusterplot function in the code uses hvplot to create a scatter plot of the bean data.
